@@ -1,0 +1,37 @@
+#body{
+    background-color:rgb(220, 255, 220);
+
+}
+.login-input{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: left;
+    right: 20px;
+}
+.login-button{}
+.login-label{
+    font-size: 15px;
+    color: Highlight;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.login{
+    border-color: royalblue;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    outline: 20px;
+    outline-offset: 5px;
+}
+.login-div{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-outside: 20px;
+}
+.login-p{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: Highlight;
+}
