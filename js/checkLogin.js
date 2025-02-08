@@ -50,16 +50,16 @@ function chechLogin() {
             if (data[i][0] === 'password') {password = data[i][1];}
         }
         if (username===-1 || password===-1)
-            window.location.assign( "/login.html");
+            window.location.assign( "./login.html");
         let result=Chepost(username,password);
         if (result!=null){
             if (result.type==='info'){}
         }
     }catch (error){
-        window.location.assign( "/login.html");
+        window.location.assign( "./login.html");
     }
     console.log(username);
-    window.location.assign( "/login.html");
+    window.location.assign( "./login.html");
 
 }
 chechLogin()
