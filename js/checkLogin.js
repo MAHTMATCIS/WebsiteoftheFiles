@@ -39,27 +39,47 @@ function Chepost(username,password) {
 function chechLogin() {
 
     const data = getCookie();
+
     for (let i = 0;i<data.length;i++){
         data[i]=data[i].split('=');
     }
     let username=-1;
     let password=-1;
+    let uncheck=-1;
+    let submitT=-1;
     try{
-        for(let i = 0;i<data.length;i++){
-            if (data[i][0] === 'username') {username = data[i][1];}
-            if (data[i][0] === 'password') {password = data[i][1];}
-        }
-        if (username===-1 || password===-1)
+        username=localStorage.getItem('username');
+        password=localStorage.getItem('password');
+        uncheck=localStorage.getItem('uncheck');
+        submitT=localStorage.getItem("submitTime");
+        console.log(submitT,'\n');
+        console.log(submitT-Date.now())
+        if (submitT-Date.now()<=0){
+            alert("Login status expired. Please log in again.")
+            localStorage.clear()
             window.location.assign( "./login.html");
-        let result=Chepost(username,password);
-        if (result!=null){
-            if (result.type==='info'){}
+        }
+
+        if (uncheck===null){
+            if (username===null || password===null)
+                window.location.assign( "./login.html");
+            let result=Chepost(username,password);
+            if (result!=null){
+                if (result.type==='info'){}
+            }
         }
     }catch (error){
-        window.location.assign( "./login.html");
+        console.log(error);
     }
-    console.log(username);
-    window.location.assign( "./login.html");
 
 }
+console.log('Hello, world!');
 chechLogin()
+const username = localStorage.getItem("username");
+const password = localStorage.getItem("password");
+
+function setupUser(){
+    const elem1=document.getElementById("h1-title");
+    elem1.innerHTML="HI! " + username;
+}
+setupUser()
