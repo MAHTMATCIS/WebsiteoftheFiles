@@ -38,11 +38,6 @@ function Chepost(username,password) {
 
 function chechLogin() {
 
-    const data = getCookie();
-
-    for (let i = 0;i<data.length;i++){
-        data[i]=data[i].split('=');
-    }
     let username=-1;
     let password=-1;
     let uncheck=-1;
@@ -70,6 +65,7 @@ function chechLogin() {
         }
     }catch (error){
         console.log(error);
+        window.location.assign( "./login.html");
     }
 
 }
