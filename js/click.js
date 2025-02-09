@@ -75,7 +75,7 @@ function login(){
     let btn = document.getElementById("login-btn");
     btn.disabled=true;
     let password = document.getElementById("password").value;
-    let che = document.getElementById("checkBtn").value;
+    let che = document.getElementById("checkBtn");
     console.log(username,password)
 
 
@@ -88,7 +88,7 @@ function login(){
                 localStorage.setItem('password',password);
                 localStorage.setItem('uncheck',"YES")
                 console.log(che.value)
-                localStorage.setItem('submitTime',Date.now()+(che.value? 7*604800000:10000))
+                localStorage.setItem('submitTime',Date.now()+(che.checked? 7*604800000:10000))
                 window.location.assign( "./index.html");
             }
         })
@@ -102,7 +102,7 @@ function ChangeF(to){
     div.style.transition='opacity 0.3s'
     div.style.opacity=0;
     function timeout(){window.location.assign(to);}
-    setTimeout(timeout,0.3);
+    setTimeout(timeout,300);
 }
 
 function register_(){
