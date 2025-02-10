@@ -35,12 +35,17 @@
     justify-content: center; /* 水平居中 */
     box-shadow: 0 0 1px rgba(0,0,0), inset 0 0 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 .login-button:hover{
     background-color: rgb(150, 150, 220);
 }
 .login-button:active{
-    background-color: rgb(100,100,100);
+    background-color: rgb(150,150,150);
+}
+.login-button:disabled{
+    cursor: not-allowed;
+    background-color: rgb(50, 50,50);
 }
 #button-div1{
     display: flex;
@@ -174,4 +179,14 @@
 .link{
     font-family: Arial, serif;
     font-style: italic;
+    cursor: pointer;
+}
+input[type="checkbox"]{
+    cursor: pointer;
+}
+input[type="checkbox"]:active{
+    background-color: mediumblue;
+}
+input[type="checkbox"]:checked{
+    background-color: blue;
 }
