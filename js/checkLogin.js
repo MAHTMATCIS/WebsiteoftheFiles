@@ -69,5 +69,7 @@ let password = localStorage.getItem("password");
 function setupUser(){
     const elem1=document.getElementById("h1-title");
     elem1.innerHTML="HI! " + username;
+    const title = document.getElementById('title');
+    title.innerHTML="Hi! " + username;
 }
 setupUser()

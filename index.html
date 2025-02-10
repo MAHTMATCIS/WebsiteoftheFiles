@@ -2,7 +2,7 @@
 <html  lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HI!</title>
+    <title id="title">HI!</title>
     <script src="js/click.js"></script>
     <script src="js/mainIndex.js"></script>
     <link rel="stylesheet" href="css/loginStyle.css" type="text/css">
@@ -27,17 +27,79 @@
 <div id="left-main">
     <img src="img/right_arrow.png" alt="arrow" width=824 height=823 id="left-img" onclick="leftMenu()" style="left: 0">
     <div id="left-menu">
-        <div class="menu-div" id="menu-title">Left Menu</div>
+        <div class="menu-div" id="menu-title">Menu</div>
         <div class="menu-div">
-            <button class="menu-btn">info</button>
+            <button class="menu-btn">
+                <img src="img/file.png" alt="file" style="height:30px;width: auto" height="300" width="300" class="menu-img">
+                <span style="width: 70%">
+                    My File
+                </span>
+            </button>
         </div>
         <div class="menu-div">
-            <button class="menu-btn">info</button>
+            <button class="menu-btn">
+                <img src="img/chat.png" alt="chat" style="height:30px;width: auto" height="300" width="300" class="menu-img">
+                <span style="width: 70%">
+                    My Chat
+                </span>
+            </button>
+        </div>
+
+        <div class="menu-div">
+            <button class="menu-btn">
+                <img src="img/copy.png" alt="copy" style="height:30px;width: auto" height="300" width="300" class="menu-img">
+                <span style="width: 70%">
+                    My Copy Board
+                </span>
+            </button>
+        </div>
+        <div class="menu-div">
+            <button class="menu-btn">
+                <img src="img/post.png" alt="post" style="height:30px;width: auto" height="300" width="300" class="menu-img">
+                <span style="width: 70%">
+                    My Post
+                </span>
+            </button>
+        </div>
+
+        <div class="menu-div separator-div">
+            <img src="img/rule.png" alt="info" height="26" width="198" class="menu-img separator-img">
         </div>
         <div class="menu-div">
             <button class="menu-btn">
                 <img src="img/account.png" alt="account" style="height:30px;width: auto" height="300" width="300" class="menu-img">
-                Account
+                <span style="width: 70%">
+                    Account
+                </span>
+            </button>
+        </div>
+        <div class="menu-div">
+            <button class="menu-btn">
+                <img src="img/settings.png" alt="setting" style="height:30px;width: auto" height="300" width="300" class="menu-img">
+                <span style="width: 70%">
+                        Settings
+                    </span>
+            </button>
+        </div>
+        <div class="menu-div">
+            <button class="menu-btn">
+                <img src="img/info.png" alt="info" style="height:30px;width: auto" height="300" width="300" class="menu-img">
+                <span style="width: 70%">
+                    Website Info
+                </span>
+            </button>
+        </div>
+        <div class="menu-div separator-div">
+            <img src="img/rule.png" alt="info" height="26" width="198" class="menu-img separator-img">
+        </div>
+        <div class="menu-div">
+            <button class="menu-btn" id="admin-btn" disabled>
+                <img src="img/admin_settings.png" alt="admin" style="height:30px;width: auto" height="300" width="300" class="menu-img">
+                <span style="width: 70%;color:red">
+                    <i><u>
+                    ADMIN SETTINGS
+                    </u></i>
+                </span>
             </button>
         </div>
     </div>

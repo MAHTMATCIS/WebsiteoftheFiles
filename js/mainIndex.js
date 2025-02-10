@@ -8,12 +8,14 @@ function leftMenu(){
         leftMenu.style.left="300px";
         leftMenu.src="img/left_arrow.png"
         leftMenu2.style.width="300px"
-        for (const i of items1){
-            i.style.opacity=1;
-        }
-        for (const i of items2){
-            i.style.opacity=1;
-        }
+        setTimeout(function(){
+            for (const i of items1){
+                i.style.opacity=1;
+            }
+            for (const i of items2){
+                i.style.opacity=1;
+            }
+            },200);
     }else{
         leftMenu.style.left="0";
         leftMenu.src="img/right_arrow.png"
