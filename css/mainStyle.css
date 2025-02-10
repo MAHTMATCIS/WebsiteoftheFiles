@@ -32,7 +32,7 @@
 
 .menu-btn{
     opacity: 0;
-    transition:opacity 0.3s, border 0.2s ease, color 0.2s;
+    transition:opacity 0.2s, border 0.2s ease, color 0.2s;
     border: 2px solid #000;
     display: flex; /* 使用Flex布局以居中内容（可选）*/
     justify-content: center; /* 水平居中（如果使用Flex布局）*/
@@ -50,7 +50,7 @@
 .menu-div{
     position: relative;
     opacity: 0;
-    transition:opacity 0.3s, border 0.2s ease;
+    transition:opacity 0.3s ease , border 0.2s ease;
     white-space: nowrap;
     overflow-x: auto;
 
@@ -65,4 +65,9 @@
     font-family:'Courier New', Courier, monospace;
     font-size: 25px;
     font-weight: bold;
+}
+
+.menu-img{
+    display: flex;
+    justify-content: center;
 }
