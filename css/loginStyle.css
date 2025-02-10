@@ -55,7 +55,7 @@
 }
 .login-label{
     font-size: 21px;
-    color: Highlight;
+    color: #007BFF;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: 20px;
@@ -111,15 +111,13 @@
     outline-offset: -20px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    color: Highlight;
+    color: #007BFF;
 }
 .message-span{
     transition: color 0.3s;
     color: rgb(255,0,0,0);
 }
-.minecraft-text{
-    font-family: "Minecraft Five v2", serif;
-}
+
 .normal-text{
     padding:0 20px;
     line-height: 30px;

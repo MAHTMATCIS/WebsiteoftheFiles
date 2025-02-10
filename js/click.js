@@ -26,7 +26,7 @@ async function Chepost(username,password,type='login') {
         headers:{
         }
     })
-    return (await f).json()
+    return (await f).   json()
 }
 
 function resetProp(){
@@ -42,7 +42,8 @@ function resetProp(){
         usernameEle.style.removeProperty('color');
         usernameInp.style.backgroundColor="rgb(255,255,255,255)";
     }catch (error){
-        console.log(error);
+        if( usernameEle!==null)
+            console.log(error);
     }
 }
 
@@ -64,6 +65,8 @@ function testForUP(password,username)
             usernameInp.style.backgroundColor="rgb(255,177,177,255)";
         }
 
+
+
 }
 
 resetProp();
@@ -73,16 +76,17 @@ resetProp();
 function login(){
     let username = document.getElementById("username").value;
     let btn = document.getElementById("login-btn");
-    btn.disabled=true;
     let password = document.getElementById("password").value;
     let che = document.getElementById("checkBtn");
     console.log(username,password)
 
 
     if (username && password) {
+        btn.disabled=true;
         let response=(Chepost(username,password))
         response.then(res=>{
             alert(res.message+'\n'+((res.data!==undefined)?res.data:''))
+            btn.disabled=false;
             if (res.type==='info') {
                 localStorage.setItem('username',username);
                 localStorage.setItem('password',password);
@@ -94,7 +98,6 @@ function login(){
         })
     }
     testForUP(password,username);
-    btn.disabled=false;
 }
 
 function ChangeF(to){
