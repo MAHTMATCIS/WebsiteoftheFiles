@@ -16,13 +16,39 @@
 
 <div class="normal-text">
     <h1 id="h1-title">HI!</h1>
-    <div>
-        <span class="normal-text">There is nothing~</span>
-    </div>
+    <span class="normal-text" id="status-bar"></span>
 </div>
 
 
 <script src="js/checkLogin.js"></script>
+
+
+<div id="row-1">
+<div id="shared-chat" class="shared-div">
+    <span class="normal-text" id="shared-text">
+        Shared Chat:
+    </span>
+    <a id="my-chat-link" class="link shared-link" href="func/chat.html"><u>
+        My Chat
+    </u>
+    </a>
+    <div>
+
+    </div>
+</div>
+    <div id="shared-clip-board" class="shared-div">
+    <span class="normal-text" id="shared-clip-board-text">
+        Shared Clip Board:
+    </span>
+        <a id="my-clip-board-link" class="link shared-link" href="func/clipBoard.html"><u>
+            My ClipBoard
+        </u>
+        </a>
+        <div>
+
+        </div>
+    </div>
+</div>
 
 <div id="left-main">
     <img src="img/right_arrow.png" alt="arrow" width=824 height=823 id="left-img" onclick="leftMenu()" style="left: 0">
@@ -49,7 +75,7 @@
             <button class="menu-btn">
                 <img src="img/copy.png" alt="copy" style="height:30px;width: auto" height="300" width="300" class="menu-img">
                 <span style="width: 70%">
-                    My Copy Board
+                    My Clip Board
                 </span>
             </button>
         </div>
@@ -96,14 +122,29 @@
             <button class="menu-btn" id="admin-btn" disabled>
                 <img src="img/admin_settings.png" alt="admin" style="height:30px;width: auto" height="300" width="300" class="menu-img">
                 <span style="width: 70%;color:red">
-                    <i><u>
-                    ADMIN SETTINGS
-                    </u></i>
+                    <i>
+                        <u>
+                            ADMIN SETTINGS
+                        </u>
+                    </i>
                 </span>
             </button>
         </div>
     </div>
+</div>
 
+<div class="footer" id="footer">
+    <div class="copyright" id="copyright">©&nbsp;MAHTMATCIS</div>
+    <div class="menu">
+        <a href="https://github.com/MAHTMATCIS/WebsiteoftheFiles" target="_blank">Github Project</a>
+        <a href="./LICENSE.html" target="_blank">License</a>
+        <a href="https://github.com/MAHTMATCIS" target="_blank">MAHTMATCIS</a>
+        <a id="dontTouch" style="color:red;transition: opacity 0.5s; cursor: pointer; font-size:5px; font-weight: bold;;position: absolute;left: 3px;bottom: 3px" onclick="dontTouch()">Don't touch</a>
+    </div>
+    <a id="language-link" href="#">
+        <i class="icon icon-language"></i>
+        <span>English</span>
+    </a>
 </div>
 
 </body>

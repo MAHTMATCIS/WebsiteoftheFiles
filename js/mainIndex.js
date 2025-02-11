@@ -27,3 +27,23 @@ function leftMenu(){
         }
     }
 }
+
+let i = 0;
+
+function liv(elem){
+    elem.style.backgroundColor=`hsl(${(i%360+Math.random()*360)%360},${100-Math.random()*20}%,50%)`
+    i+=60;
+}
+
+function dontTouch(){
+    const elem2=document.getElementById("dontTouch");
+    const elem=document.getElementById("first-div");
+    elem2.style.opacity=0;
+    elem2.style.cursor="default";
+    elem.style.color="white"
+    elem.style.opacity=1;
+    setTimeout(function(){
+        elem.style.backgroundColor="red";
+        setInterval(function (){liv(elem)},100);
+    },5000);
+}

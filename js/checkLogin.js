@@ -26,7 +26,7 @@ function chechLogin() {
         window.location.assign('./login.html')
     }
     console.log("uncheck:", uncheck)
-    if (uncheck!==undefined){
+    if (uncheck!=="YES"){
         if (username===null || password===null){}
         let result=Chepost(username,password);
         result.then(result=>{
@@ -71,5 +71,7 @@ function setupUser(){
     elem1.innerHTML="HI! " + username;
     const title = document.getElementById('title');
     title.innerHTML="Hi! " + username;
+    const elem2 = document.getElementById("status-bar");
+    elem2.innerHTML="User <u>" + username+'</u> ! Welcome to the page! \nYou can open the <b>left menu</b> or search <b>everywhere</b>.';
 }
 setupUser()
