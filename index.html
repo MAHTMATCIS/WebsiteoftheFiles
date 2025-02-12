@@ -29,11 +29,11 @@
         Shared Chat:
     </span>
     <a id="my-chat-link" class="link shared-link" href="func/chat.html"><u>
-        My Chat
+        more...
     </u>
     </a>
-    <div>
-
+    <div class="showNothing">
+        There is nothing   :(
     </div>
 </div>
     <div id="shared-clip-board" class="shared-div">
@@ -41,11 +41,11 @@
         Shared Clip Board:
     </span>
         <a id="my-clip-board-link" class="link shared-link" href="func/clipBoard.html"><u>
-            My ClipBoard
+            more...
         </u>
         </a>
-        <div>
-
+        <div class="showNothing">
+            There is nothing   :(
         </div>
     </div>
 </div>
@@ -119,7 +119,7 @@
             <img src="img/rule.png" alt="info" height="26" width="198" class="menu-img separator-img">
         </div>
         <div class="menu-div">
-            <button class="menu-btn" id="admin-btn" disabled>
+            <button class="menu-btn" id="admin-btn" onclick="AdminSetting()">
                 <img src="img/admin_settings.png" alt="admin" style="height:30px;width: auto" height="300" width="300" class="menu-img">
                 <span style="width: 70%;color:red">
                     <i>
@@ -145,6 +145,13 @@
         <i class="icon icon-language"></i>
         <span>English</span>
     </a>
+</div>
+
+<div id="admin-bar" hidden="hidden">
+<button class="menu-btn"  onclick="allUsers()">
+    All Users
+</button>
+    <div id="AdminDisplay"></div>
 </div>
 
 </body>

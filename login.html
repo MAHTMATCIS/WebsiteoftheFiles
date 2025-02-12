@@ -50,6 +50,10 @@
             <label for="checkBtn">7-day login free</label>
             <input id="checkBtn" type="checkbox" />
         </div>
+        <div>
+            <label for="checkBtn2">Automatic login verification (recommended to disable)</label>
+            <input id="checkBtn2" type="checkbox"/>
+        </div>
     </div>
 </div>
 
@@ -59,9 +63,7 @@
     for (const inpel of inputElem)
     inpel.addEventListener('keydown', function(event) {
         if (event.key === 'Enter' || event.keyCode === 13) {
-            console.log("log in!");
             event.preventDefault();
-            // 示例操作：显示警告框
             login()
         }
     });

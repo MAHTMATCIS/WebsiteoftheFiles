@@ -94,18 +94,26 @@
     /* 鼠标悬停时边框颜色变化 */
     border: 2px solid #f00;
 }
+
+span{
+    font-family: 'Consolas', serif;
+}
 .shared-div{
     border:2px solid #0008;
+    background-color: #f5f5f560;
     border-radius: 10px;
     margin: 20px 40px;
         position: relative; /* 父元素需要相对定位 */
-    min-height: 400px;
+    min-height: 100px;
     width: 50%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 .shared-link {
     position: absolute;
     top: 5px; /* 距离父容器顶部0 */
     right: 20px; /* 距离父容器右边0 */
+    font-family: 'Consolas', serif;
 }
 #row-1{
     display: flex;
@@ -116,7 +124,7 @@
         border-radius: 10px;
         margin: 20px 40px;
         position: relative; /* 父元素需要相对定位 */
-        min-height: 400px;
+        min-height: 100px;
         width: inherit;
     }
     #row-1{
@@ -201,7 +209,7 @@ body>.footer .copyright {
         word-spacing: normal;
         line-height: normal;
         text-transform: none;
-        text-indent: 0px;
+        text-indent: 0;
         text-shadow: none;
         display: inline-block;
         text-align: center;
@@ -239,4 +247,30 @@ div[class="lic"]>div[class="separator-div"]{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     margin: 20px;
+}
+
+.showNothing{
+    position: absolute;
+    font-size: 15px;
+    color: #53535350;
+    top: 50%;
+    left: 50%;
+    font-weight: inherit;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: translate(-50%, -50%); /* 负偏移一半自身宽高，实现居中 */
+}
+
+#admin-bar{
+    background-color: rgb(255,255,255,90%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+}
+#AdminDisplay{
+    overflow: scroll;
 }

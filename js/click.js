@@ -78,6 +78,7 @@ function login(){
     let btn = document.getElementById("login-btn");
     let password = document.getElementById("password").value;
     let che = document.getElementById("checkBtn");
+    let che2 = document.getElementById("checkBtn2");
     console.log(username,password)
 
 
@@ -85,14 +86,17 @@ function login(){
         btn.disabled=true;
         let response=(Chepost(username,password))
         response.then(res=>{
-            alert(res.message+'\n'+((res.data!==undefined)?res.data:''))
+            console.log(res)
+            alert(res.message+'\n'+((res.data!==undefined&&res.nodata!==true)?res.data:''))
             btn.disabled=false;
             if (res.type==='info') {
                 localStorage.setItem('username',username);
                 localStorage.setItem('password',password);
-                localStorage.setItem('uncheck',"YES")
-                console.log(che.value)
-                localStorage.setItem('submitTime',Date.now()+(che.checked? 7*604800000:10000))
+                localStorage.setItem('uncheck',(che2.checked?"YES":null));
+                localStorage.setItem('cridID',res.data.cridID);
+                localStorage.setItem('passID',res.data.passwordID);
+                console.log(che.value);
+                localStorage.setItem('submitTime',Date.now()+(che.checked? 7*604800000:10000));
                 window.location.assign( "./index.html");
             }
         })
