@@ -272,5 +272,37 @@ div[class="lic"]>div[class="separator-div"]{
     bottom: 0;
 }
 #AdminDisplay{
-    overflow: scroll;
+    word-wrap: break-word;
+    height: 100px;
+}
+.clipboard-div{
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    left: 0;
+    right: 0;
+    box-sizing: border-box; /* 确保边框和内边距被包含在宽高计算之内 */
+
+    height: 100%;
+
+    /* 如果需要保持纵横比或限制大小，请根据需求调整这些值或使用max-width/max-height */
+    max-width: 100%; /* 保持宽度不超过父容器 */
+    max-height: 100%; /* 保持高度不超过父容器 */
+}
+#row-1\ shared-div-parent{
+    box-sizing: border-box; /* 确保边框和内边距被包含在宽高计算之内 */
+    position: relative; /* 或 absolute/fixed，根据布局需求选择 */
+    right:40px;
+    margin:40px;
+    height: calc(100% - 300px);
+}
+.shared-text{
+    margin: 20px;
+    resize: none; position: absolute; /* 或 relative, fixed, 等，依据布局需求而定 */
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box; /* 确保边框和内边距被包含在宽高计算之内 */
+    font-size: 20px;
 }
